@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen DIW ejercicio 4</title>
+    <style>
+
+        #principal {
+            background-color: purple;
+            display: flex;
+            /*Diremos que la dirección del flujo visual del contenido será vertical, es decir, en columna (column), nótese que esto lo invertiremos cuando el ratón pase por encima del contenido*/
+            flex-direction: column;
+        }
+
+
+        /*":hover" nos permitirá seleccionar el contenedor "principal" cuando el ratón pase por encima del contenido*/
+        #principal:hover {
+            flex-direction: column-reverse;
+        }
+
+        /*Seleccionamos las secciones dentro del contenedor "principal"*/
+        #principal section {
+            /*Les damos un color de fondo rosa (pink)*/
+            background-color: pink;
+            /*Les damos un tamaño de fuente "x-large", nótese que esto será sobreseido posteriormente*/
+            font-size: x-large;
+            /*Aplicamos "margin: auto" para que colapsen los espacios en torno a cada sección*/
+            margin: auto;
+        }
+
+        /*Debido a la jerarquía de prioridad de los selectores de CSS, las propiedades de este selector se aplicarán por encima de las de "#principal section"*/
+        #principal #tercera {
+            font-size: xx-large;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <section id="principal">
+
+        <section>.</section>
+        <section>,</section>
+        <!--Añadimos una id a la tercera sección para poder seleccionarla en el código CSS de los estilos con mayor facilidad,
+            también hubíeramos podido haber usado "nth-child(3)" en el CSS-->
+        <section id="tercera">#</section>
+        <section>*</section>
+        <section>$</section>
+
+    </section>
+
+
+
+</body>
+</html>

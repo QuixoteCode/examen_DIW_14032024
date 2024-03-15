@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen DIW ejercicio 3</title>
+
+    <!--Abrimos una etiqueta "<style>" en la cabecera para indicar el CSS del que haremos uso en el mismo documento-->
+    <style>
+
+        h1 {
+
+            /*El color de fondo en inglés, indicando que será gris (grey)*/
+            background-color: grey;
+
+            /*El texto del título h1 será de color blanco (white)*/
+            color: white;
+
+            /*Aquí ponemos el nombre de la animación de la que haremos uso*/
+            animation: animacionTitulo;
+
+            /*Aquí determinaremos cuanto durará la animación en segundos (s), aunque también hubieramos podido usar microsegundos*/
+            animation-duration: 5s;
+
+            /*Esta propiedad nos permite indicar cuantas veces se repetirá la animación*/
+            animation-iteration-count: 2;
+            
+        }
+
+
+        /*Definiremos la animación mediante "@keyframes", seguidamente pondremos el nombre que vimos antes, en la propiesdad "animation" de h1*/
+        @keyframes animacionTitulo {
+
+            /*"desde" en inglés, el punto de partida*/
+            from {
+                margin-right: 50%;
+            }
+
+            /*La mitad de nuestra animación, adicionalmente, si hubieramos querido, pudieramos haber definido otros puntos
+            como el 25% o el 75%*/
+            50% {
+                font-style: oblique;
+            }
+
+            /*"hasta" en inglés, el punto final de la animación*/
+            to {
+                background-color: black;
+                width: 100%;
+            }
+        }
+
+
+        /*Usando ":hover" para seleccionar podremos darle propiedades que solo se aplicarán cuando el cursor pase por encima del contenido*/
+        p:hover {
+            transition: 3s ease-out;
+            background-color: green;
+            color: blue;
+            margin-left: 50%;
+
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+    <h1>DIW Examen 2 EVAL</h1>
+
+    <p>UT4 Multimedia y dispositivos</p>
+    <p>UT5 Usabilidad y Accesibilidad</p>
+    <p>UT6 Bootstrap</p>
+    
+</body>
+</html>

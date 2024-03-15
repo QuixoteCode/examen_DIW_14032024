@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Examen DIW</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
+    <link href="//cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link href="//cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js">
+
+    <style>
+
+        .container {
+            background-color: lightgrey;
+            border: 4px black solid;
+        }
+
+        #fila2 {
+            background-color: grey;
+            border: 4px black solid;
+
+        }
+
+        #fila3 {
+            height: 100px;
+            background-color: grey;
+            color: white;
+            border: solid black;
+        }
+
+        #columna3 {
+            background-color: #e4e4e4;
+            border: 1px solid grey;
+            height: 50px;
+            color: black;
+        }
+
+
+
+    </style>
+</head>
+
+<body>
+
+<!--APARTADO A-->
+<section class="container">
+    <section class="row">
+        <p class="col col-xs-12 col-xl-12">A B C D E F G H I J K L M N Ñ O P Q R S T U V W X Y Z
+            A B C D E F G H I J K L M N Ñ O P Q R S T U V W X Y Z
+            A B C D E F G H I J K L M N Ñ O P Q R S T U V W X Y Z
+            A B C D E F G H I J K L M N Ñ O P Q R S T U V W X Y Z
+            A B C D E F G H I J K L M N Ñ O P Q R S T U V W X Y Z</p>
+
+
+        <p class="col col-xs-12 col-sm-6">Lucas Fernández Chamizo</p>
+
+        <p class="col col-xs-12 col-sm-6 col-md-4 col-lg-2 col-xl-1">A B C D E F G H I J K L M N Ñ O P Q R S T U V W X Y Z
+            A B C D E F G H I J K L M N Ñ O P Q R S T U V W X Y Z
+            A B C D E F G H I J K L M N Ñ O P Q R S T U V W X Y Z
+            A B C D E F G H I J K L M N Ñ O P Q R S T U V W X Y Z
+            A B C D E F G H I J K L M N Ñ O P Q R S T U V W X Y Z
+            Lucas Fernández Chamizo</p>
+    </section>
+</section>
+
+
+<!--APARTADO B-->
+<section class="container">
+    <!--Usamos la clase de Bootstrap "my-4" para indicarle que deje un margen vertical (es decir, "top" y "bottom")-->
+    <section class="row my-4" id="fila2">
+        ALINEACION 1
+    </section>
+    <section class="row my-4" id="fila2">
+        ALINEACION 2
+    </section>
+    <section class="row my-4" id="fila2">
+        ALINEACION 3
+    </section>
+</section>
+
+
+
+
+
+
+<!--APARTADO C-->
+<section class="container">
+    <section class="row" id="fila3">
+        <!--Hacemos uso de las clases de bootstrap "mX-Y" para añadirles margenes verticales, donde X seria el tope (top) o el fondo (bottom) e Y seria la magnitud-->
+        <section class="col mt-2" id="columna3">Una de las tres columnas</section>
+        <section class="col mt-5" id="columna3">Dos de las tres columnas</section>
+        <section class="col mb-5" id="columna3">Tres de las tres columnas</section>
+    </section>
+</section>
+
+
+
+
+
+
+
+<!--APARTADO D-->
+<!--Nótese que al estar definiendo el color de fondo de una tabla, haremos uso de "table-X" en vez de "background-X"-->
+<table class="table">
+
+    <!--Por defecto, "<th>", es decir, la cabecera de tablas (table header), ya muestra el texto en negrita-->
+    <tr>
+        <th>Asignatura</th>
+        <th>Tecnologia</th>
+        <th>Curso</th>
+    </tr>
+    <!--La clase "table-success" muestra el fondo de la tabla en color verde, "success" queriendo significar éxito, debido a las asociaciones del color-->
+    <tr class="table-success">
+        <td>SISIN</td>
+        <td>Packet Tracer</td>
+        <td>1</td>
+    </tr>
+    <!--La clase "table-info" muestra el fondo de la tabla en color azul, "info" siendo la abreviatura de información, clase llamada así debido a las asociaciones del color-->
+    <tr class="table-info">
+        <td>BBDD</td>
+        <td>sql</td>
+        <td>1</td>
+    </tr>
+     <!--La clase "table-warning" muestra el fondo de la tabla en color amarillo naranjado, "warning" significando aviso/precaución, clase llamada así debido a que el color suele indicar que algo es peligroso o delicado-->
+    <tr class="table-warning">
+        <td>DIW</td>
+        <td>bootstrap</td>
+        <td>2</td>
+    </tr>
+    <!--La clase "table-secondary" muestra el fondo de la tabla en color gris, "secondary" significando secundario, clase llamada así debido a que el color suele indicar que algo es de una relevancia secundaria-->
+    <tr class="table-secondary">
+        <td>DWEC</td>
+        <td>javascript</td>
+        <td>2</td>
+    </tr>
+    <!--La clase "table-danger" muestra el fondo de la tabla en color rojo, "danger" significando peligro, clase llamada así debido a que el color indica que algo requiere mucha atención-->
+    <tr class="table-danger">
+        <td>DWES</td>
+        <td>php</td>
+        <td>2</td>
+    </tr>
+</table>
+
+
+
+
+<!--APARTADO E-->
+<section class="container">
+    <section class="row">
+        <!--La clase "btn-success" nos permitirá tener un botón de color verde con el texto blanco, tiene el nombre "success" debido a la asociación del color verde con que algo ha salido de forma exitosa ("succesful/succesfully").
+
+        Con "data-bs-toggle" indicaremos que tipo de despliegue el click hará
+        El atributo title, por su parte, indicará el título del popover
+        Mientras que el atributo "data-bs-content" indicará el contenido del cuerpo del popover que se desplegará
+        
+    Disponemos de más detalles sobre el popover en el script-->
+        <section class="btn btn-success" data-bs-toggle="popover" title="Como estudie..." data-bs-content="Aprobare">
+            Examen DIW
+        </section>
+    </section>
+</section>
+
+<!--APARTADO F-->
+<section class="container">
+    <section class="row">
+        <!--La clase "btn-secondary" nos permite crear un botón gris-->
+        <section class="btn btn-secondary" data-bs-toggle="dropdown">
+            FCTS
+            
+        </section>
+        <section class="dropdown">aaaaaaa</section>
+    </section>
+</section>
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+
+    <script>
+        //Activar los popovers
+        var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+        var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+            return new bootstrap.Popover(popoverTriggerEl)
+        })
+
+    </script>
+</body>
+

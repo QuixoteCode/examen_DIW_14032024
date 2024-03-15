@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen DIW ejercicio 2</title>
+</head>
+<body>
+
+    <!--La marca "details" nos permite situar entre su apertura y su cierre un contenido de "detalles".
+        Este contenido se mostrará o se ocultará según hagamos click sobre él, si ya está abierto, se cerrará, y viceversa
+        Por defecto, si no indicamos nada, los detalles estarán ocultos-->
+    <details>
+        <!--Por otra parte, "<summary>" nos permite ofrecer un resumen de los detalles que se mostrará junto a la flecha que indicará la apertura y el cierre-->
+        <summary>Ver Asignaturas</summary>
+        <p>DIW</p>
+        <p>DWES</p>
+        <p>DWEC</p>
+        <p>Empresa</p>
+    </details>
+
+
+    <!--Como se nos muestra en el enunciado, este elemento de detalles ya deberá de aparecer abierto por defecto,
+        para ello le indicamos "open"-->
+    <details open>
+        <summary>Notas obtenidas</summary>
+        <p>DIW: 10, DWES: 5, DWEC: 6, EMPRESA: 7</p>
+    </details>
+
+    <!--Llamamos a la función del script (véase el final del documento) mediante el contenido del atributo "onclick"-->
+    <button onclick="confirmarNotas()">Confirmar notas</button>
+
+    <!--Describimos aquí el diálogo, este no se mostrará hasta que el usuario de la página no haga click sobre el botón previo-->
+    <dialog>
+        <p>¿Confirma que las notas son correctas?</p>
+        <button onclick="responderSi()">Si</button>
+        <button onclick="responderNo()">No</button>
+    </dialog>
+
+
+
+</body>
+</html>
+
+
+
+<script>
+    //Seleccionamos el primer (y único) elemento con una etiqueta "dialog"
+    var dialogoDocumento = document.getElementsByTagName("dialog")[0];
+
+
+
+    function confirmarNotas() {
+        //Mostramos el diálogo añadiendo el atributo "open"
+        dialogoDocumento.setAttribute("open", "");
+
+    }
+
+
+    function responderSi() {
+        alert("Notas grabadas con éxito");
+        //Escondiendo el dialogo quitando el atributo "open"
+        dialogoDocumento.removeAttribute("open");
+    }
+
+
+    function responderNo() {
+        alert("Reclamación enviada con éxito");
+        //Escondiendo el dialogo quitando el atributo "open"
+        dialogoDocumento.removeAttribute("open");
+    }
+    
+
+
+</script>
